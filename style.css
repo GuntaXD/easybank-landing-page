@@ -14,6 +14,10 @@ li{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+}
+
 .main{
     max-width: 1440px;
     margin: 0 auto;
@@ -174,3 +178,117 @@ li{
             top: -18%;
             left: 15%;
         }
+
+    .about{
+        background-color: hsl(220, 16%, 96%);
+        height: 100vh;
+        padding: 7%;
+    }
+
+        .about__why{
+            width: 60%;
+        }
+
+            .about__why--title{
+                color: hsl(233, 26%, 24%);
+                font-size: 2em;
+                font-weight: 300;
+            }
+
+            .about__why--paragraph{
+                color: hsl(233, 8%, 62%);
+                margin: 1em 0;
+            }
+
+    .features{
+        margin-top: 5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+        .characteristic{
+            height: 40%;
+            width: 23%;
+        }
+
+            .characteristic__title{
+                margin: 1em 0;
+                color: hsl(233, 26%, 24%);
+                font-weight: 400;
+            }
+
+            .characteristic__paragraph{
+                color: hsl(233, 8%, 62%);
+                font-size: .9em;
+                line-height: 1.4em;
+            }
+
+    .lastest{
+        height: 100vh;
+        width: 100%;
+        padding: 7%;
+    }
+
+        .lastest__title{
+            font-size: 2em;
+            font-weight: 400;
+            margin-bottom: 1.8em;
+        }
+
+        .articles__container{
+            height: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+            .article{
+                border-radius: 8px 8px 0 0;
+                height: 92%;
+                width: 22%;
+                overflow: hidden;
+            }
+
+                .article__info{
+                    height: 50%;
+                    width: 100%;
+                    padding: 8%;
+                }
+
+                .article__img{
+                    height: 50%;
+                    width: 100%;
+                }
+
+                .article__autor,.article__title,.article__paragraph{
+                    color: hsl(233, 8%, 62%);
+                }
+
+                .article__autor{
+                    font-size: .6em;
+                }
+
+                .article__title{
+                    font-size: 1em;
+                    margin: 3% 0;
+                    color: hsl(233, 26%, 24%);
+                }
+
+                .article__paragraph{
+                    font-size: .8em;
+                }
+
+        .article:hover .article__title{
+            color: hsl(136, 65%, 51%);
+        }
+
+.footer{
+    background-color: hsl(233, 26%, 24%);
+    height: 30vh;
+}
+
+    .footernav{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
