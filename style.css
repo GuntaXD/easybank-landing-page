@@ -289,6 +289,81 @@ a{
 
     .footernav{
         display: flex;
+        height: 100%;
         width: 100%;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 7%;
     }
+
+        .logo__social{
+            height: 80%;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+            .footer__img--logo{
+                width: 80%;
+                height: auto;
+            }
+
+            .social__medias{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .social:hover>.social__img{
+                filter: hue-rotate(20deg); 
+            }
+
+        .nav__footer--links{
+            display: flex;
+            flex-wrap: wrap;
+            align-content:space-around;
+            width: 30%;
+            height: 60%;
+        }
+
+            .nav__footer--link{
+                width: 50%;
+                flex: 1 1 auto;
+                align-self: auto;
+            }
+
+                .nav__footer--link>a{
+                    color: #FFF;
+                    font-weight: 300;
+                    font-size: .9em;
+                }
+
+        .request__rights{
+            height: 60%;
+            width: 24%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+
+            .request{
+                background: hsl(136, 65%, 51%);
+                background: linear-gradient(90deg , hsl(136, 65%, 51%) 0%, hsl(192, 70%, 51%) 100%);
+                width: 60%;
+                height: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100px;
+                color: #FFF;
+                font-size: .9em;
+            }
+
+            .rights__reserved{
+                color: hsl(233, 8%, 62%);
+                font-size: .8em;
+            }
+
+            
