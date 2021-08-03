@@ -23,6 +23,14 @@ a{
     margin: 0 auto;
 }
 
+header{
+    position: relative;
+}
+
+.nav__links--mobile{
+    display: none;
+}
+
 .nav{
     background-color: #FFF;
     height: 80px;
@@ -99,7 +107,7 @@ a{
 		.btn__menu--span{
 			position: absolute;
 			content: '';
-			background: #000;
+			background: hsl(233, 26%, 24%);
 			height: 5px;
 			width: 34px;
 			border-radius: 5px;
@@ -115,34 +123,38 @@ a{
 				top: 20px;
 			}
 
-			.span1.btn-anim{
+			.btn__menu.visible>.span1{
 				transform: rotate(140deg);
 				top: 10px;
 			}
 
-			.span2.btn-anim{
+			.btn__menu.visible>.span2{
 				opacity: 0%;
 			}
 
-			.span3.btn-anim{
+			.btn__menu.visible>.span3{
 				transform: rotate(-140deg);
 				top: 10px;
             }
             
 .header__container{
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
     .header__info{
+        min-width: 450px;
         width: 45%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 0 6%;
+        flex: 1 0;
     }
 
         .header__info--title{
@@ -229,9 +241,10 @@ a{
             }
 
     .lastest{
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
         padding: 7%;
+        padding-bottom: 2%;
     }
 
         .lastest__title{
@@ -386,4 +399,39 @@ a{
                 font-size: .8em;
             }
 
-            
+@media all and ( max-width: 1050px ){
+
+    .nav__links--mobile{
+        display: flex;
+        background-color: #FFF;
+        height: 50vh;
+        width: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: -100%;
+        left: 6%;
+        box-shadow:0px 14px 80px 60px  hsl(233, 26%, 24%);
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    .nav__links--mobile.visible{
+        top: 100px;
+        transition: .4s ;
+    }
+
+    .nav__links{
+        display: none;
+    }
+
+    .nav__invite{
+        display: none;
+    }
+
+    .btn__menu{
+        display: block;
+    }
+    
+}
