@@ -25,6 +25,7 @@ a{
 
 header{
     position: relative;
+    overflow: hidden;
 }
 
 .nav__links--mobile{
@@ -276,7 +277,6 @@ header{
                 min-width: 260px;
                 width: 22%;
                 overflow: hidden;
-                /* flex: 1 0; */
                 margin: 0 1%;
             }
 
@@ -315,21 +315,19 @@ header{
 
 .footer{
     background-color: hsl(233, 26%, 24%);
-    height: 30vh;
+    min-height: 30vh;
+    max-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    flex-wrap: wrap;
 }
 
-    .footernav{
-        display: flex;
-        height: 100%;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 7%;
-    }
-
         .logo__social{
-            height: 80%;
-            width: 20%;
+            max-height: 80%;
+            min-width: 260px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -338,6 +336,7 @@ header{
             .footer__img--logo{
                 width: 80%;
                 height: auto;
+                margin-bottom: 2em;
             }
 
             .social__medias{
@@ -363,13 +362,15 @@ header{
             flex-wrap: wrap;
             align-content:space-around;
             width: 30%;
+            min-width: 280px;
             height: 60%;
         }
 
             .nav__footer--link{
+                min-width: 140px;
                 width: 50%;
                 flex: 1 1 auto;
-                align-self: auto;
+                margin-bottom: 1em;
             }
 
                 .nav__footer--link>a{
@@ -384,7 +385,7 @@ header{
 
         .request__rights{
             height: 60%;
-            width: 24%;
+            min-width: 260px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -394,14 +395,15 @@ header{
             .request{
                 background: hsl(136, 65%, 51%);
                 background: linear-gradient(90deg , hsl(136, 65%, 51%) 0%, hsl(192, 70%, 51%) 100%);
-                width: 60%;
-                height: 40%;
+                width: 180px;
+                height: 40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 100px;
                 color: #FFF;
                 font-size: .9em;
+                margin-bottom: 2em;
             }
 
                 .request:hover{
@@ -480,6 +482,22 @@ header{
         height: auto;
         width: 100%;
     }
+
+    .logo__social{
+        margin: 1em auto;
+        align-items:center;
+    }
+
+    .nav__footer--links{
+        margin: 1em auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .request__rights{
+        margin: 1em auto;
+        align-items: center;
+    }
 }
 
 @media all and ( max-width:670px ){
@@ -500,17 +518,17 @@ header{
         margin: .5em auto;
     }
 
-    /* .lastest{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    } */
-
     .lastest__title{
         text-align: center;
     }
 
     .article{
         margin: 0 auto;
+    }
+}
+
+@media all and ( max-width: 400px ){
+    .nav__footer--links{
+        min-width: 0;
     }
 }
